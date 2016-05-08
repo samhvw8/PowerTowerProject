@@ -1,0 +1,21 @@
+package data;
+
+import static helpers.Artist.quickLoad;
+
+import org.newdawn.slick.opengl.Texture;
+
+public enum ProjectileType {
+
+	CannonBall(quickLoad("bullet"),10,500);
+	
+	Texture textures;
+	int damage, range;
+	float speed;
+	
+	ProjectileType(Texture textures, int damage, float speed){
+		this.textures = textures;
+		this.damage = damage;
+		this.speed = speed;
+	}
+	
+}

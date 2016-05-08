@@ -1,0 +1,73 @@
+package data;
+
+import org.newdawn.slick.opengl.Texture;
+import static helpers.Artist.*;
+
+public abstract class Tower implements Entity {
+
+	private float x, y;
+	private int width, height, damge;
+	private Enemy target;
+	private Texture[] textures;
+
+	public Tower(TowerType type, Tile startTile){
+		this.textures = type.textures;
+		this.damge = type.damage;
+		this.x = startTile.getX();
+		this.y = startTile.getY();
+		this.width = startTile.getWidth();
+		this.height = startTile.getHeight();		
+	}
+	
+	public float getX() {
+		// TODO Auto-generated method stub
+		return x;
+	}
+
+	public float getY() {
+		// TODO Auto-generated method stub
+		return y;
+	}
+
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return width;
+	}
+
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return height;
+	}
+
+	public void setX(float x) {
+		// TODO Auto-generated method stub
+		this.x = x;
+	}
+
+	public void setY(float y) {
+		// TODO Auto-generated method stub
+		this.y = y;
+	}
+
+	public void setWidth(int width) {
+		// TODO Auto-generated method stub
+		this.width = width;
+	}
+
+	public void setHeight(int height) {
+		// TODO Auto-generated method stub
+		this.height = height;
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void draw() {
+		// TODO Auto-generated method stub
+		for(int i = 0; i < textures.length; i++)
+			drawQuadTex(textures[i],x,y,width,height);
+	}
+
+}

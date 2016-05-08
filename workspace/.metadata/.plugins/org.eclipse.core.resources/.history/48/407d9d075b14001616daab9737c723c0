@@ -1,0 +1,21 @@
+package data;
+
+import org.newdawn.slick.opengl.Texture;
+import static helpers.Artist.*;
+public enum TowerType {
+	
+	RedTower(new Texture[]{quickLoad("tower"),quickLoad("gun")},10,1000,3),
+	BlueTower(new Texture[]{quickLoad("bluetower"),quickLoad("bluegun")},30,1000,3),
+	IceTower(new Texture[]{quickLoad("tower"),quickLoad("bluegun")},30,1000,3);
+	
+	Texture[] textures;
+	int damage, range;
+	float firingSpeed;
+	
+	TowerType(Texture[] textures, int damage, int range,float firingSpeed){
+		this.textures = textures;
+		this.damage = damage;
+		this.range = range;
+		this.firingSpeed = firingSpeed;
+	}
+}

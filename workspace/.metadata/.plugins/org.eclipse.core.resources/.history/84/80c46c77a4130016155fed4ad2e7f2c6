@@ -1,0 +1,69 @@
+package data;
+
+
+
+public class Tower implements Entity{
+
+	private float x,y;
+	private int width, height;
+	
+	public float getX() {
+		// TODO Auto-generated method stub
+		return x;
+	}
+
+	
+	public float getY() {
+		// TODO Auto-generated method stub
+		return y;
+	}
+
+	
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return width;
+	}
+
+	
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return height;
+	}
+
+	
+	public void setX(float x) {
+		// TODO Auto-generated method stub
+		this.x = x;
+	}
+
+	
+	public void setY(float y) {
+		// TODO Auto-generated method stub
+		this.y = y;
+	}
+
+	
+	public void setWidth(int width) {
+		// TODO Auto-generated method stub
+		this.width = width;
+	}
+
+	
+	public void setHeight(int height) {
+		// TODO Auto-generated method stub
+		this.height = height;
+	}
+
+	
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	public void draw() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

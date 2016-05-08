@@ -1,0 +1,10 @@
+package data;
+
+public class Editor {
+	private TileGrid grid;
+	
+	public Editor(){
+		grid = new TileGrid();
+	}
+
+}

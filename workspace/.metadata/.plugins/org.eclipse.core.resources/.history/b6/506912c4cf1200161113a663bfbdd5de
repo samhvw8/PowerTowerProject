@@ -1,0 +1,24 @@
+package data;
+
+import org.newdawn.slick.opengl.Texture;
+
+import UI.UI;
+
+import static helpers.Artist.*;
+
+public class MainMenu {
+	
+	private Texture background;
+	private UI menuUI;
+	
+	public MainMenu(){
+		background = quickLoad("mainmenu");
+		menuUI = new UI();
+		menuUI.addButton("Play", "play", x, y);
+	}
+	
+	public void update(){
+		drawQuadTex(background,0,0,2048,1024);
+	}
+
+}

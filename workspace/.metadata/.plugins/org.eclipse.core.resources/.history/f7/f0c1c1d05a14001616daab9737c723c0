@@ -1,0 +1,15 @@
+package data;
+
+import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.newdawn.slick.opengl.Texture;
+
+public class TowerBlue extends Tower{
+	
+	public TowerBlue(TowerType type, Tile startTile,CopyOnWriteArrayList<Enemy> enemies) {
+		super(type, startTile,enemies);
+		// TODO Auto-generated constructor stub
+	}
+
+}
