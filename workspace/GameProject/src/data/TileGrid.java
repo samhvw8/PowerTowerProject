@@ -8,7 +8,7 @@ public class TileGrid {
 	private Tile[][] map;
 	
 	public TileGrid(){
-		this.tileWidth = 15;
+		this.tileWidth = 16;
 		this.tileHeight = 10;
 		map = new Tile[tileWidth][tileHeight];
 		for(int i = 0; i < map.length; i++){

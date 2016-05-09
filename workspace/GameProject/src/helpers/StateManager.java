@@ -3,6 +3,9 @@ package helpers;
 import data.Editor;
 import data.Game;
 import data.MainMenu;
+import data.TileGrid;
+
+import static helpers.Leveler.*;
 
 public class StateManager {
 	public static enum GameState{
@@ -14,21 +17,11 @@ public class StateManager {
 	public static Game game;
 	public static Editor editor;
 	
-	static int[][] map = {
-			{1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0},
-			{0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0},
-			{0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0},
-			{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0},
-			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
-			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
-			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
-			{0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,0},
-			{0,2,1,0,1,1,0,0,0,0,0,0,0,0,1,0},
-			{0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0}
+	static TileGrid map = loadMap("newMap1");
 			
 			
 			
-	};
+			
 	
 	public static void update(){
 		switch(gameState){

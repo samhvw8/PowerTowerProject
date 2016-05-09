@@ -14,8 +14,6 @@
 <fullyQualifiedTypeName name="data.Editor"/>
 <fullyQualifiedTypeName name="helpers.StateManager"/>
 <fullyQualifiedTypeName name="helpers.StateManager.GameState"/>
-<fullyQualifiedTypeName name="data.TileGrid"/>
-<fullyQualifiedTypeName name="helpers.Leveler"/>
 <fullyQualifiedTypeName name="data.Tile"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -27,8 +25,11 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="data.Player"/>
 <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
-<fullyQualifiedTypeName name="UI.UI"/>
 <fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
 <fullyQualifiedTypeName name="UI.Button"/>
 <fullyQualifiedTypeName name="helpers.Artist"/>
+<fullyQualifiedTypeName name="UI.UI.Menu"/>
+<fullyQualifiedTypeName name="UI.UI"/>
+<fullyQualifiedTypeName name="data.TileGrid"/>
+<fullyQualifiedTypeName name="helpers.Leveler"/>
 </qualifiedTypeNameHistroy>
