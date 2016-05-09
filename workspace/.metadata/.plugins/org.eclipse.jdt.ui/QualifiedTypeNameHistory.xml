@@ -12,9 +12,6 @@
 <fullyQualifiedTypeName name="data.Game"/>
 <fullyQualifiedTypeName name="data.MainMenu"/>
 <fullyQualifiedTypeName name="data.Editor"/>
-<fullyQualifiedTypeName name="UI.UI"/>
-<fullyQualifiedTypeName name="UI.Button"/>
-<fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
 <fullyQualifiedTypeName name="helpers.StateManager"/>
 <fullyQualifiedTypeName name="helpers.StateManager.GameState"/>
 <fullyQualifiedTypeName name="data.TileGrid"/>
@@ -26,9 +23,12 @@
 <fullyQualifiedTypeName name="data.TileType"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="helpers.Artist"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.Texture"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="data.Player"/>
 <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
+<fullyQualifiedTypeName name="UI.UI"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
+<fullyQualifiedTypeName name="UI.Button"/>
+<fullyQualifiedTypeName name="helpers.Artist"/>
 </qualifiedTypeNameHistroy>

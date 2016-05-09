@@ -13,8 +13,9 @@ public class Player {
 	private TileGrid grid;
 	private WaveManager waveManager;
 	private ArrayList<Tower> towerList;
-	private boolean leftMouseButtonDown, rightMouseButtonDown;
+	private boolean leftMouseButtonDown, rightMouseButtonDown, holdingTower;
 	public static int cash, lives;
+	private Tower tempTower;
 
 	public Player(TileGrid grid, WaveManager waveManager) {
 		this.grid = grid;
@@ -22,6 +23,8 @@ public class Player {
 		this.towerList = new ArrayList<Tower>();
 		this.leftMouseButtonDown = false;
 		this.rightMouseButtonDown = false;
+		this.holdingTower = false;
+		this.tempTower = null;
 		cash = 0;
 		lives = 0;
 	}
@@ -34,18 +37,27 @@ public class Player {
 	public static boolean modifyCash(int amount) {
 		if (cash + amount >= 0) {
 			cash += amount;
+			System.out.println(cash);
 			return true;
 		}
+		System.out.println(cash);
 		return false;
 	}
 
 	public static void modifyLives(int amount) {
 		lives += amount;
+		System.out.println(lives);
 	}
-	
 
 	public void update() {
-		//update all tower in the game
+
+		// update holding tower
+		if (holdingTower) {
+			tempTower.setX(getMouseTile().getX());
+			tempTower.setY(getMouseTile().getY());
+			tempTower.draw();
+		}
+		// update all tower in the game
 		for (Tower t : towerList) {
 			t.update();
 			t.draw();
@@ -54,21 +66,11 @@ public class Player {
 
 		// Handle Mouse Input
 		if (Mouse.isButtonDown(0) && !leftMouseButtonDown) {
-			if (modifyCash(-25)) {
-				towerList.add(new TowerBlue(TowerType.BlueTower,
-						grid.getTile(Mouse.getX() / 64, (HEIGHT - Mouse.getY() - 1) / 64),
-						waveManager.getCurrentWave().getEnemyList()));
-
-			}
+			placeTower();
 		}
 
 		if (Mouse.isButtonDown(1) && !rightMouseButtonDown) {
-			if (modifyCash(-55)) {
-				towerList.add(new TowerIce(TowerType.IceTower,
-						grid.getTile(Mouse.getX() / 64, (HEIGHT - Mouse.getY() - 1) / 64),
-						waveManager.getCurrentWave().getEnemyList()));
-
-			}
+			System.out.println("Right Mouse Clicked");
 		}
 
 		leftMouseButtonDown = Mouse.isButtonDown(0);
@@ -88,4 +90,23 @@ public class Player {
 		}
 	}
 
+	private void placeTower() {
+		if (holdingTower) {
+			if (modifyCash(-tempTower.getCost())) {
+				towerList.add(tempTower);
+			}
+		}
+		holdingTower = false;
+		tempTower = null;
+	}
+
+	public void pickTower(Tower t) {
+		tempTower = t;
+		holdingTower = true;
+	}
+
+	private Tile getMouseTile() {
+		return grid.getTile(Mouse.getX() / TILE_SIZE, (HEIGHT - Mouse.getY() - 1) / TILE_SIZE);
+
+	}
 }

@@ -34,7 +34,7 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class Artist {
 	
-	public static final int WIDTH = 960,HEIGHT = 640;
+	public static final int WIDTH = 1152,HEIGHT = 640;
 	public static final int TILE_SIZE = 64;
 	public static void beginSession(){
 		Display.setTitle("Defense Tower");

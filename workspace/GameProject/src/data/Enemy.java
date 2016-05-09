@@ -63,8 +63,6 @@ public class Enemy implements Entity {
 				y += delta() * checkPoints.get(currentCheckpoint).getyDirection() * speed;
 
 			}
-			// x += delta() * direction[0];
-			// y += delta() * direction[1];
 
 		}
 	}

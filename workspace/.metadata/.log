@@ -524,3 +524,81 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-05-08 18:54:38.058 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-05-08 18:55:20.034
+!MESSAGE Invalid ZIP archive: F:\java-mars\workspace\lib\jars\lwjgl.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-05-08 18:55:20.202
+!MESSAGE Invalid ZIP archive: F:\java-mars\workspace\lib\jars\lwjgl_util.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-05-08 18:55:20.214
+!MESSAGE Invalid ZIP archive: F:\java-mars\workspace\lib\jars\slick-util.jar
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-05-08 18:55:23.853
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Son'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 18:55:27.073
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 18:55:27.179
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 18:55:27.243
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+!SESSION 2016-05-08 19:09:17.918 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-05-08 19:09:29.539
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Son'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 19:09:30.878
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 19:09:30.889
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-08 19:09:30.910
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+!SESSION 2016-05-09 08:40:51.780 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 2 2016-05-09 08:42:21.456
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-09 08:42:21.596
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-05-09 08:42:21.630
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-05-09 08:45:14.298
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Son'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

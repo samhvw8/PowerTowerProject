@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\Son\Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="F:\OOP_Project\workspace\lib\jars" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -50,6 +50,9 @@
 	</section>
 	<section name="OverrideMethodDialog">
 		<item value="true" key="showtypes"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="0" key="index"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
