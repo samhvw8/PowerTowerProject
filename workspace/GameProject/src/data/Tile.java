@@ -5,91 +5,91 @@ import static helpers.Artist.*;
 
 public class Tile {
 
-	private float x,y;
-	private int width,height;
-	private Texture texture;
-	private TileType type;
-	private boolean occupied;
-	
-	public Tile(float x, float y, int width, int height, TileType type){
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
-		this.type = type;
-		this.texture = quickLoad(type.textureName);
-		if(type.buildable){
-			occupied = false;
-		}else{
-			occupied = true;
-		}
-	}
-	
-	public void draw(){
-		drawQuadTex(texture, x, y, width, height);
-	}
+    private float x, y;
+    private int width, height;
+    private Texture texture;
+    private TileType type;
+    private boolean occupied;
 
-	public float getX() {
-		return x;
-	}
+    public Tile(float x, float y, int width, int height, TileType type) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.type = type;
+        this.texture = quickLoad(type.textureName);
+        if (type.buildable) {
+            occupied = false;
+        } else {
+            occupied = true;
+        }
+    }
 
-	public int getXPlace(){
-		return (int) x/TILE_SIZE;
-	}
-	
-	public void setX(float x) {
-		this.x = x;
-	}
+    public void draw() {
+        drawQuadTex(texture, x, y, width, height);
+    }
 
-	public float getY() {
-		return y;
-	}
-	
-	public int getYPlace(){
-		return (int) y/TILE_SIZE;
-	}
+    public float getX() {
+        return x;
+    }
 
-	public void setY(float y) {
-		this.y = y;
-	}
+    public int getXPlace() {
+        return (int) x / TILE_SIZE;
+    }
 
-	public int getWidth() {
-		return width;
-	}
+    public void setX(float x) {
+        this.x = x;
+    }
 
-	public void setWidth(int width) {
-		this.width = width;
-	}
+    public float getY() {
+        return y;
+    }
 
-	public int getHeight() {
-		return height;
-	}
+    public int getYPlace() {
+        return (int) y / TILE_SIZE;
+    }
 
-	public void setHeight(int height) {
-		this.height = height;
-	}
+    public void setY(float y) {
+        this.y = y;
+    }
 
-	public Texture getTexture() {
-		return texture;
-	}
+    public int getWidth() {
+        return width;
+    }
 
-	public void setTexture(Texture texture) {
-		this.texture = texture;
-	}
+    public void setWidth(int width) {
+        this.width = width;
+    }
 
-	public TileType getType() {
-		return type;
-	}
+    public int getHeight() {
+        return height;
+    }
 
-	public void setType(TileType type) {
-		this.type = type;
-	}
-	
-	public boolean getOccupied(){
-		return occupied;
-	}
-	
-	public void setOccupied(boolean occupied){
-		this.occupied = occupied;
-	}
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public Texture getTexture() {
+        return texture;
+    }
+
+    public void setTexture(Texture texture) {
+        this.texture = texture;
+    }
+
+    public TileType getType() {
+        return type;
+    }
+
+    public void setType(TileType type) {
+        this.type = type;
+    }
+
+    public boolean getOccupied() {
+        return occupied;
+    }
+
+    public void setOccupied(boolean occupied) {
+        this.occupied = occupied;
+    }
 }

@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="loadMap" key="selection"/>
+		<item value="beginSession" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Beginsession"/>
+			<item value="Begin"/>
 			<item value="loadMap"/>
 			<item value="modifyL"/>
 			<item value="health"/>
 			<item value="CannonBall"/>
 			<item value="TowerCannon"/>
 			<item value="64"/>
-			<item value="damage"/>
-			<item value="direction"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Tower"/>
@@ -23,9 +23,9 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="310" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="408" key="DIALOG_HEIGHT"/>
 		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="339" key="DIALOG_Y_ORIGIN"/>
 	</section>

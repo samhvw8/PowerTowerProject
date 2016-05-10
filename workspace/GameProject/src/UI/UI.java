@@ -6,121 +6,124 @@ import org.lwjgl.input.Mouse;
 import static helpers.Artist.*;
 
 public class UI {
-	private ArrayList<Button> buttonList;
-	private ArrayList<Menu> menuList;
 
-	public UI() {
-		buttonList = new ArrayList<Button>();
-		menuList = new ArrayList<Menu>();
-	}
+    private ArrayList<Button> buttonList;
+    private ArrayList<Menu> menuList;
 
-	public void addButton(String name, String textureName, int x, int y) {
-		buttonList.add(new Button(name, quickLoad(textureName), x, y));
-	}
+    public UI() {
+        buttonList = new ArrayList<Button>();
+        menuList = new ArrayList<Menu>();
+    }
 
-	public boolean isButtonClick(String buttonName) {
-		Button b = getButton(buttonName);
-		float mouseY = HEIGHT - Mouse.getY() - 1;
-		if (Mouse.getX() > b.getX() && Mouse.getX() < (b.getX() + b.getWidth()) && mouseY > b.getY()
-				&& mouseY < (b.getY() + b.getHeight())) {
-			return true;
-		}
-		return false;
-	}
+    public void addButton(String name, String textureName, int x, int y) {
+        buttonList.add(new Button(name, quickLoad(textureName), x, y));
+    }
 
-	private Button getButton(String buttonName) {
-		for (Button b : buttonList) {
-			if (b.getName().equals(buttonName)) {
-				return b;
-			}
-		}
-		return null;
-	}
+    public boolean isButtonClick(String buttonName) {
+        Button b = getButton(buttonName);
+        float mouseY = HEIGHT - Mouse.getY() - 1;
+        if (Mouse.getX() > b.getX() && Mouse.getX() < (b.getX() + b.getWidth()) && mouseY > b.getY()
+                && mouseY < (b.getY() + b.getHeight())) {
+            return true;
+        }
+        return false;
+    }
 
-	public void createMenu(String menuName, int x, int y,int width, int height, int optionWidth, int optionHeight) {
-		menuList.add(new Menu(menuName, x, y,width,height, optionWidth, optionHeight));
-		
-	}
+    private Button getButton(String buttonName) {
+        for (Button b : buttonList) {
+            if (b.getName().equals(buttonName)) {
+                return b;
+            }
+        }
+        return null;
+    }
 
-	public Menu getMenu(String menuName) {
-		for (Menu m : menuList) {
-			if (menuName.equals(m.getName()))
-				return m;
-		}
-		return null;
-	}
+    public void createMenu(String menuName, int x, int y, int width, int height, int optionWidth, int optionHeight) {
+        menuList.add(new Menu(menuName, x, y, width, height, optionWidth, optionHeight));
 
-	public void draw() {
-		for (Button b : buttonList) {
-			drawQuadTex(b.getTexture(), b.getX(), b.getY(), b.getWidth(), b.getHeight());
-		}
-		for (Menu m : menuList) {
-			m.draw();
-		}
-	}
+    }
 
-	public class Menu {
+    public Menu getMenu(String menuName) {
+        for (Menu m : menuList) {
+            if (menuName.equals(m.getName())) {
+                return m;
+            }
+        }
+        return null;
+    }
 
-		private ArrayList<Button> menuButton;
-		private int x, y,width, height, buttonAmount, optionWidth, optionHeight, padding;
-		String menuName;
+    public void draw() {
+        for (Button b : buttonList) {
+            drawQuadTex(b.getTexture(), b.getX(), b.getY(), b.getWidth(), b.getHeight());
+        }
+        for (Menu m : menuList) {
+            m.draw();
+        }
+    }
 
-		public Menu(String menuName, int x, int y,int width, int height, int optionWidth, int optionHeight) {
-			this.menuName = menuName;
-			this.x = x;
-			this.y = y;
-			this.width = width;
-			this.height = height;
-			this.optionHeight = optionHeight;
-			this.optionWidth = optionWidth;
-			this.buttonAmount = 0;
-			this.menuButton = new ArrayList<Button>();
-		}
+    public class Menu {
 
-		public void addButton(Button b) {
-			setButton(b);
-		}
-		
-		public void quickAdd(String name, String buttonTextureName){
-			Button b = new Button(name,quickLoad(buttonTextureName),0,0);
-			setButton(b);
-		}
-		
-		private void setButton(Button b){
-			if (optionWidth != 0)
-				b.setY(y + (buttonAmount / optionWidth) * TILE_SIZE);
-			b.setX(x + (buttonAmount % optionWidth) * TILE_SIZE);
-			buttonAmount++;
-			menuButton.add(b);
-		}
+        private ArrayList<Button> menuButton;
+        private int x, y, width, height, buttonAmount, optionWidth, optionHeight, padding;
+        String menuName;
 
-		public boolean isButtonClick(String buttonName) {
-			Button b = getButton(buttonName);
-			float mouseY = HEIGHT - Mouse.getY() - 1;
-			if (Mouse.getX() > b.getX() && Mouse.getX() < (b.getX() + b.getWidth()) && mouseY > b.getY()
-					&& mouseY < (b.getY() + b.getHeight())) {
-				return true;
-			}
-			return false;
-		}
+        public Menu(String menuName, int x, int y, int width, int height, int optionWidth, int optionHeight) {
+            this.menuName = menuName;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.optionHeight = optionHeight;
+            this.optionWidth = optionWidth;
+            this.buttonAmount = 0;
+            this.menuButton = new ArrayList<Button>();
+        }
 
-		private Button getButton(String buttonName) {
-			for (Button b : menuButton) {
-				if (b.getName().equals(buttonName)) {
-					return b;
-				}
-			}
-			return null;
-		}
+        public void addButton(Button b) {
+            setButton(b);
+        }
 
-		public void draw() {
-			for (Button b : menuButton) {
-				drawQuadTex(b.getTexture(), b.getX(), b.getY(), b.getWidth(), b.getHeight());
-			}
-		}
+        public void quickAdd(String name, String buttonTextureName) {
+            Button b = new Button(name, quickLoad(buttonTextureName), 0, 0);
+            setButton(b);
+        }
 
-		public String getName() {
-			return menuName;
-		}
-	}
+        private void setButton(Button b) {
+            if (optionWidth != 0) {
+                b.setY(y + (buttonAmount / optionWidth) * TILE_SIZE);
+            }
+            b.setX(x + (buttonAmount % optionWidth) * TILE_SIZE);
+            buttonAmount++;
+            menuButton.add(b);
+        }
+
+        public boolean isButtonClick(String buttonName) {
+            Button b = getButton(buttonName);
+            float mouseY = HEIGHT - Mouse.getY() - 1;
+            if (Mouse.getX() > b.getX() && Mouse.getX() < (b.getX() + b.getWidth()) && mouseY > b.getY()
+                    && mouseY < (b.getY() + b.getHeight())) {
+                return true;
+            }
+            return false;
+        }
+
+        private Button getButton(String buttonName) {
+            for (Button b : menuButton) {
+                if (b.getName().equals(buttonName)) {
+                    return b;
+                }
+            }
+            return null;
+        }
+
+        public void draw() {
+            for (Button b : menuButton) {
+                drawQuadTex(b.getTexture(), b.getX(), b.getY(), b.getWidth(), b.getHeight());
+            }
+        }
+
+        public String getName() {
+            return menuName;
+        }
+    }
 }
